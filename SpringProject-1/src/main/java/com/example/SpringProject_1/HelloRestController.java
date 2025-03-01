@@ -20,4 +20,9 @@ public class HelloRestController {
         return "Hello " + name + "!";
     }
 
+//    http://localhost:8080/hello/post
+    @PostMapping("/post")
+    public String sayHello(@RequestBody User user) {
+        return "Hello " + user.getFirstName() + " " + user.getLastName() + "!";
+    }
 }
